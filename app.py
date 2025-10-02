@@ -52,7 +52,7 @@ with st.sidebar:
             "llama3-8b-8192",
             "llama3-70b-8192",
         ],
-        index=0,
+        index=1,
         help="Mixtral recommended for lower rate limits"
     )
     
