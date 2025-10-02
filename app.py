@@ -47,13 +47,12 @@ with st.sidebar:
     model_name = st.selectbox(
         "Groq Model",
         [
-            "mixtral-8x7b-32768",
             "meta-llama/llama-4-scout-17b-16e-instruct",
             "llama3-8b-8192",
             "llama3-70b-8192",
         ],
         index=0,
-        help="Mixtral recommended for lower rate limits"
+        help="Choose any model"
     )
     
     temperature = st.slider("LLM Temperature", 0.0, 1.0, 0.1, 0.1)
@@ -278,7 +277,7 @@ if st.button("🚀 Generate Multi-Agent Report", type="primary"):
             if "Max iterations" in str(e):
                 st.info("Try increasing max iterations in the sidebar or simplify your topic.")
             elif "rate limit" in str(e).lower():
-                st.info("Rate limit hit. Try using mixtral-8x7b-32768 model or wait a moment.")
+                st.info("Rate limit hit. Try using a different model or wait a moment.")
 
 # Footer
 st.markdown("---")
