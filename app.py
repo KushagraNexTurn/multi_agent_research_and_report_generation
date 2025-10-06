@@ -72,8 +72,7 @@ Settings.llm = Groq(
 )
 
 Settings.embed_model = HuggingFaceEmbedding(
-    model_name="sentence-transformers/all-MiniLM-L6-v2",
-    model_kwargs={"device": "cpu"}
+    model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
 
 # Tools
@@ -215,6 +214,10 @@ if "topic" not in st.session_state:
     st.session_state["topic"] = examples[0]
 
 topic = st.text_input("Research Topic", value=st.session_state["topic"], help="Enter any topic for multi-agent analysis")
+
+if topic != st.session_state["topic"]:
+    st.session_state["topic"] = topic
+
 
 # Example buttons
 st.write("**Quick Examples:**")
