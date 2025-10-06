@@ -140,3 +140,4 @@ wrapt==1.17.2
 yarg==0.1.10
 yarl==1.20.1
 yaspin==3.2.0
+serpapi
