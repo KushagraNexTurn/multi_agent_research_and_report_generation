@@ -4,5 +4,6 @@ llama-index-llms-groq
 llama-index-embeddings-huggingface==0.6.1
 google-search-results
 sentence-transformers==2.2.2
-torch==2.0.1
-transformers==4.32.0
+torch==2.8.0
+sentence-transformers==2.2.2
+
